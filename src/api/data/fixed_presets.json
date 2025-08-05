@@ -1,0 +1,7 @@
+{
+  "prioritize_large_groups": true,
+  "boost_lodging_match_exact": true,
+  "reward_date_flexibility": true,
+  "prefer_text_opt_in": true,
+  "boost_repeat_guest_note_match": true
+}

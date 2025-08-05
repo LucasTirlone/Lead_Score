@@ -1,17 +1,26 @@
-fastapi==0.115.13
+# --- Web stack ---
+fastapi==0.115.3                 # última versão estável
 uvicorn[standard]==0.29.0
 gunicorn==23.0.0
-azure-identity==1.19.0
-aiohttp==3.11.1
-azure-ai-inference==1.0.0b9
-azure-ai-projects==1.0.0.b11
-azure-search-documents
+starlette>=0.40.0
+jinja2==3.1.3
+aiohttp>=3.9,<4        # transporte async usado pelo Azure SDK
 
-azure-core==1.34.0  # other versions might not compatible
-azure-core-tracing-opentelemetry
-azure-monitor-opentelemetry==1.6.9 # version such as 1.6.11 isn't compatible
-azure-search-documents
-opentelemetry-sdk
+# --- Data / normalização ---
+pandas==2.2.2
+python-dateutil==2.9.0.post0
+
+# --- Azure SDK ---
+azure-identity==1.19.0
+azure-ai-inference==1.0.0b9      # ChatCompletionsClient (preview)
+azure-ai-projects==1.0.0b11
+azure-search-documents==11.5.0
+azure-core==1.34.0               # mantido p/ compatibilidade
+azure-monitor-opentelemetry==1.6.9
+
+# --- Observabilidade ---
+# versão compatível com azure-monitor-opentelemetry 1.6.9
+opentelemetry-sdk>=1.28,<1.32
+
+# --- Build tooling ---
 setuptools==80.9.0
-starlette>=0.40.0 # fix vulnerability
-jinja2 # new dependent of fastapi
