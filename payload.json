@@ -1,0 +1,16 @@
+﻿{
+  "leads": [
+    {
+      "_id": { "$oid": "67bca8181fc16ff1fad22b61" },
+      "first_name": "Jonathan",
+      "group_size": 4,
+      "preferred_lodging_type": ["Suites"],
+      "desired_date_ranges": [
+        { "start_date": "2026-06-01", "end_date": "2026-06-05" }
+      ],
+      "text_opt_in": true,
+      "email_opt_in": true,
+      "notes": ""
+    }
+  ]
+}
